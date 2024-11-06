@@ -6,7 +6,7 @@ const session = require("express-session");
 const path = require('path');
 const port = 3001;
 
-app.use(express.static("./src/public"));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(
     session({
         secret: "ProductBTVN", // Khóa bí mật để mã hóa session
