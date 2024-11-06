@@ -1,0 +1,50 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/{{style}}" />
+        <title>{{title}}</title>
+        {{#if productList}}
+            <link rel="stylesheet" href="/css/productList.css" />
+            <link
+                rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+            />
+        {{/if}}
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        />
+
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="header__inner">
+                    <h1>PRODUCT</h1>
+                    <ul class="page__list">
+                        <li class="page__item"><a href="/">Home</a></li>
+                        {{#if user}}
+                            <li user="{{user}}"></li>
+                        {{else}}
+                            <li class="page__item"><a href="/signup">Sign Up</a></li>
+                        {{/if}}
+                    </ul>
+                    {{#if user}}
+                        <a href="/logout" class="btn_login">Logout</a>
+                    {{else}}
+                        <a href="/login" class="btn_login">Login</a>
+                    {{/if}}
+
+                </div>
+            </div>
+        </header>
+        {{{body}}}
+        <script src="js/main.js"></script>
+    </body>
+</html>

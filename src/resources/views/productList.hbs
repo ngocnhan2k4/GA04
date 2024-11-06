@@ -1,0 +1,21 @@
+<div class="container-fluid mt-50">                     
+        <div class="row">
+            {{#each products}}
+            <div class="col-md-4">
+                <div class="product-card mb-30">
+                    <a class="product-thumb" href="/{{id}}" data-abc="true"><img src={{image}} alt="Product" width="100" height="100" ></a>
+                    <div class="product-card-body">
+                        <div class="product-category"><div  data-abc="true">Laptops</div></div>
+                        <h3 class="product-title"><a href="#" data-abc="true">{{name}}</a></h3>
+                        <h4 class="product-price">{{cost}}</h4>
+                    </div>
+                    <div class="product-button-group">
+                        <div class="product-button btn-wishlist"  data-abc="true"><i class="fa fa-heart-o"></i><span>Wishlist</span></div>
+                        <div class="product-button btn-compare"  data-abc="true"><i class="fa fa-retweet"></i><span>Compare</span></div>
+                        <a class="product-button" href="/{{id}}" data-abc="true"><i class="fa fa-angle-right"></i><span>Details</span></a>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+</div>
