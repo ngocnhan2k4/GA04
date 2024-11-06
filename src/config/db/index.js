@@ -1,11 +1,11 @@
 const { Sequelize } = require("sequelize");
 
 const sequelize = new Sequelize(
-    "freedb_productBTV",
-    "freedb_productBTVN",
-    "w5RXf#XsmdQ#XC4",
+    "sql12741852",
+    "sql12741852",
+    "WYEkbSB41E",
     {
-        host: "sql.freedb.tech", // Địa chỉ host của MySQL
+        host: "sql12.freemysqlhosting.net", // Địa chỉ host của MySQL
         dialect: "mysql", // Chọn dialect cho MySQL
         dialectModule: require('mysql2'),
         logging: false, // Tắt logging SQL (tuỳ chọn)
