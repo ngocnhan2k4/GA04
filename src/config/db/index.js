@@ -7,6 +7,7 @@ const sequelize = new Sequelize(
     {
         host: "sql.freedb.tech", // Địa chỉ host của MySQL
         dialect: "mysql", // Chọn dialect cho MySQL
+        dialectModule: require('mysql2'),
         logging: false, // Tắt logging SQL (tuỳ chọn)
     }
 );

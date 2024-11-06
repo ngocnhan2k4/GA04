@@ -3,7 +3,7 @@ const app = express();
 const handlebars = require("express-handlebars");
 const route = require("./routers");
 const session = require("express-session");
-const port = 3000;
+const port = 3001;
 
 app.use(express.static("./src/public"));
 app.use(
