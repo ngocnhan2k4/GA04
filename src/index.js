@@ -3,6 +3,7 @@ const app = express();
 const handlebars = require("express-handlebars");
 const route = require("./routers");
 const session = require("express-session");
+const path = require('path');
 const port = 3001;
 
 app.use(express.static("./src/public"));
@@ -19,8 +20,9 @@ app.use(express.urlencoded({ extended: true }));
 
 app.engine("hbs", handlebars.engine({ extname: ".hbs" }));
 app.set("view engine", "hbs");
-app.set("views", "./src/resources/views");
-
+//app.set("views", "./src/resources/views");
+console.log(__dirname);
+    app.set('views', path.join(__dirname,  'resources', 'views'));
 route(app);
 
 app.listen(port, () => {
@@ -29,5 +31,6 @@ app.listen(port, () => {
 
 
 module.exports = (req, res) => {
+    
     app(req, res); // Vercel gọi hàm này để xử lý yêu cầu
   };

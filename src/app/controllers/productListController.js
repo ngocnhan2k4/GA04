@@ -2,6 +2,7 @@
 //const product = require('../models/product1')
 const e = require("express");
 const { getProducts, getProductById } = require("../services/productService");
+
 const productListController = {
     async index(req, res) {
         let products = [];
